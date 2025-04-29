@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persoane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="persoane.xsd">
+    <persoana id="1">
+        <nume>Popescu</nume>
+        <prenume>Ion</prenume>
+        <varsta>23</varsta>
+        <adresa>Camin 10</adresa>
+        <strada>Elm Street</strada>
+        <numar>0712345678</numar>
+        <email>ionpopescu@gmail02.com</email>
+        <data_nastere>01.01.2002</data_nastere>
+        <gen>M</gen>
+        <nationalitate>Romana</nationalitate>
+        <calificare>Automatica si Calculatoare CTI</calificare>
+        <localitate>Iasi</localitate>
+        <judet>Iasi</judet>
+        <tara>Romania</tara>    
+    </persoana>
+    <persoana id="2">
+        <nume>Popescu</nume>
+        <prenume>Maria</prenume>
+        <varsta>22</varsta>
+        <adresa>Camin 10</adresa>
+        <strada>Elm Street</strada>
+        <numar>0723456789</numar>
+        <email>mariapopescu03@gmail.com</email>
+        <data_nastere>01.01.2003</data_nastere>
+        <gen>F</gen>
+        <nationalitate>Romana</nationalitate>
+        <calificare>Automatica si Calculatoare CTI</calificare>
+        <localitate>Iasi</localitate>
+        <judet>Iasi</judet>
+        <tara>Romania</tara>    
+    </persoana>
+    <persoana id="3">
+        <nume>Ionescu</nume>
+        <prenume>Marian</prenume>
+        <varsta>23</varsta>
+        <adresa>Camin 9</adresa>
+        <strada>Elm Street</strada>
+        <numar>0701234567</numar>
+        <email>marianionescu02@gmail.com</email>
+        <data_nastere>14.02.2002</data_nastere>
+        <gen>M</gen>
+        <nationalitate>Romana</nationalitate>
+        <calificare>Automatica si Calculatoare IS</calificare>
+        <localitate>Iasi</localitate>
+        <judet>Iasi</judet>
+        <tara>Romania</tara>    
+    </persoana>
+</persoane>

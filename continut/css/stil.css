@@ -1,0 +1,113 @@
+body
+{
+  background: linear-gradient(to right, black, lightblue);
+  background-color:black;
+  color:white;
+}
+
+tr:hover td {
+  background-color: lightblue;
+  color:black;
+}
+
+table, th, td {
+    border:0.06em solid white;
+  }
+
+  .horizon {
+    display:flex;
+    list-style: none;
+    padding:0;
+    margin:0;
+    background-color: white;
+    
+  }
+  
+  .horizon .anav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.8em 1em;
+    text-decoration: none;
+    color:black;
+  }
+  
+  .horizon .anav:hover:not(.active) {
+    background-color: green;
+    color:black;
+  }
+
+  .horizon .active {
+    background-color: lightblue;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.8em 1em;
+    text-decoration: none;
+    color:black;
+  }
+
+  aside .acontent {
+    background-color: white;
+    color: black;
+    border: 0.1em solid green;
+    padding: 0.8em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  aside .acontent:hover, .acontent:active {
+    background-color: lightgreen;
+    color: black;
+  }
+
+  h2.carte::first-letter {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+  }
+  
+  h2.bunvenit::first-line {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.2em;
+  }
+
+  
+input:focus {
+  background-color: lightblue;
+}
+
+textarea:focus {
+  background-color: lightblue;
+}
+
+select:focus {
+  background-color: lightblue;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;     
+  }
+
+  nav ul li {
+    width: 100%;           
+    text-align: center;     
+  }
+
+  nav ul li .anav {
+    font-size: 1em;
+    padding: 0.7em;
+  }
+
+  nav ul li .acontent {
+    font-size: 1em;
+    padding: 0.7em;
+  }
+}
+
+img:not(.favicon), iframe{
+  border: 6px solid lightblue;
+  border-radius: 12px;
+}

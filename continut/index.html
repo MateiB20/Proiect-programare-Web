@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+    <head>
+        <meta charset="UTF-8"> 
+        
+        <title> Index </title>
+
+        <link rel="stylesheet" href="css/stil.css" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script>
+            function schimbaContinut(resursa, jsFisier, jsFunctie)
+            {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("continut").innerHTML =this.responseText;
+
+                    const newContent = document.querySelector('#continut');
+            if (newContent) {
+                newContent.offsetHeight;
+                newContent.classList.add('dynamic-loaded');
+            }
+            var existingLink = document.querySelector("link[href='css/stil.css']");
+            if (!existingLink) {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                //link.type = 'text/css';
+                link.href = 'css/stil.css';  
+                document.head.appendChild(link);
+            }
+
+                    if (jsFisier) {
+                    var elementScript = document.createElement('script');
+                    elementScript.onload = function () {
+                        if (jsFunctie) {
+                            window[jsFunctie]();
+                        }
+                    };
+                    elementScript.src = jsFisier;
+                    document.head.appendChild(elementScript);
+                } else {
+                    if (jsFunctie) {
+                        window[jsFunctie]();
+                    }
+                }
+                }
+  };
+  var navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                link.classList.add('anav');
+            });
+            var activeLink = document.querySelector(`nav a[onclick*="${resursa}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+  xhttp.open("GET", resursa+".html", true);
+  xhttp.send();
+            }
+        </script>
+    </head>
+
+    <body onload="schimbaContinut('acasa')">
+
+        <header>
+
+            <h1> <img src="favicon.ico" class="favicon" height="30" width="30">Magazin de calculatoare </h1>
+
+        
+
+        
+
+        <nav>
+
+        <ul class="horizon">
+            <li><a class="active" onclick="schimbaContinut('acasa', null, null)">Acasa</a></li>
+            <li><a class="anav" onclick="schimbaContinut('inregistreaza', 'js/script.js', null)">Înregistrează</a></li>
+            <li><a class="anav" onclick="schimbaContinut('video',null, null)">Video</a></li>
+            <li><a class="anav" onclick="schimbaContinut('despre',null, null)">Despre</a></li>
+            <li><a class="anav" onclick="schimbaContinut('desen',null, null)">Desen</a></li>
+            <li><a class="anav" onclick="schimbaContinut('invat', 'js/script.js', 'startInterval')">Învăț</a></li>
+            <li><a class="anav" onclick="schimbaContinut('persoane', 'js/persoane.js', 'incarcaPersoane')">Persoane</a></li>
+            <li><a class="anav" onclick="schimbaContinut('verifica','js/script.js', null)">Verifică</a></li>
+            <li><a class="anav" onclick="schimbaContinut('cumparaturi','js/cumparaturi.js', null)">Cumpărături</a></li>
+        </ul>
+
+          </nav>
+        </header>
+            <main id="continut">
+            
+
+</main>
+
+        <footer>
+  
+            <p> &copy; 2025. </p>
+        
+        </footer>
+       
+    </body>
+
+    </html>
